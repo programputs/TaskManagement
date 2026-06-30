@@ -1,11 +1,13 @@
 .auth-wrapper {
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #f3f4f6;
     padding: 1.5rem;
     font-family: -apple-system, 'Inter', system-ui, sans-serif;
+    box-sizing: border-box;
 }
 
 .auth-card {
@@ -15,6 +17,7 @@
     border-radius: 20px;
     padding: 2.5rem 2rem;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
 }
 
 .auth-logo {
@@ -22,7 +25,7 @@
     font-weight: 800;
     font-size: 0.95rem;
     letter-spacing: 0.05em;
-    color: #65606f;
+    color: #000000;
     margin-bottom: 1.5rem;
 }
 
@@ -41,7 +44,6 @@
     margin: 0 0 1.75rem;
 }
 
-/* Segmented tabs */
 .auth-tabs {
     display: flex;
     background: #f3f4f6;
@@ -103,16 +105,19 @@
     align-items: center;
     color: #9ca3af;
     margin-right: 0.6rem;
+    flex-shrink: 0;
 }
 
 .input-group input {
     flex: 1;
+    min-width: 0;
     border: none;
     background: transparent;
     padding: 0.85rem 0;
     font-size: 0.95rem;
     color: #111827;
     outline: none;
+    -webkit-appearance: none;
 }
 
 .input-group input::placeholder {
@@ -125,6 +130,7 @@
     color: #9ca3af;
     cursor: pointer;
     margin-left: 0.5rem;
+    flex-shrink: 0;
 }
 
 .auth-btn {
@@ -132,16 +138,17 @@
     padding: 0.9rem;
     border: none;
     border-radius: 12px;
-    background: #65606f;
+    background: #d6c4d2;
     color: #fff;
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
     transition: background 0.2s, transform 0.1s;
+    width: 100%;
 }
 
 .auth-btn:hover:not(:disabled) {
-    background: #65606f;
+    background: #d6c4d2;
 }
 
 .auth-btn:active:not(:disabled) {
@@ -168,11 +175,59 @@
 }
 
 .auth-switch a {
-    color: #65606f;
+    color: #d6c4d2;
     font-weight: 700;
     text-decoration: none;
 }
 
 .auth-switch a:hover {
     text-decoration: underline;
+}
+
+
+@media (max-width: 380px) {
+    .auth-wrapper {
+        padding: 1rem;
+    }
+
+    .auth-card {
+        padding: 1.75rem 1.25rem;
+        border-radius: 16px;
+    }
+
+    .auth-title {
+        font-size: 1.4rem;
+    }
+
+    .auth-subtitle {
+        font-size: 0.85rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .auth-tabs {
+        margin-bottom: 1.25rem;
+    }
+
+    .tab {
+        font-size: 0.85rem;
+        padding: 0.55rem 0;
+    }
+
+    .auth-form {
+        gap: 0.85rem;
+    }
+
+    .input-group input {
+        font-size: 16px;
+        padding: 0.75rem 0;
+    }
+}
+
+
+@media (max-height: 600px) {
+    .auth-wrapper {
+        align-items: flex-start;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
 }
