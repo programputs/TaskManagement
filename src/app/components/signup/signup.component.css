@@ -138,7 +138,7 @@
     padding: 0.9rem;
     border: none;
     border-radius: 12px;
-    background: #d6c4d2;
+    background: #000000;
     color: #fff;
     font-size: 1rem;
     font-weight: 700;
@@ -148,7 +148,7 @@
 }
 
 .auth-btn:hover:not(:disabled) {
-    background: #d6c4d2;
+    background: #000000;
 }
 
 .auth-btn:active:not(:disabled) {
@@ -175,7 +175,7 @@
 }
 
 .auth-switch a {
-    color: #d6c4d2;
+    color: #000000;
     font-weight: 700;
     text-decoration: none;
 }
